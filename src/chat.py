@@ -1,6 +1,9 @@
 import argparse
 from src.providers import call_openai, call_anthropic, ProviderError
 from src.mock import mock_answer
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def main():
     p = argparse.ArgumentParser(
