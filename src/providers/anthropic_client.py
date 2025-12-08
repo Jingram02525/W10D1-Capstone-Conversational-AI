@@ -8,7 +8,7 @@ from anthropic import APIConnectionError, RateLimitError, BadRequestError, Authe
 load_dotenv()
 
 # Use a real model ID (avoid "-latest" aliases to prevent 404s)
-_DEFAULT_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-4-5")
+_DEFAULT_MODEL = os.getenv("ANTHROPIC_MODEL", "claude-sonnet-4-5")
 
 def _anthropic_text(resp) -> str:
     """
