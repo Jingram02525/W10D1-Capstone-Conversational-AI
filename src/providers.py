@@ -35,7 +35,7 @@ def call_anthropic(prompt: str, timeout: int = 20) -> str:
         client = anthropic.Anthropic(api_key=env("ANTHROPIC_API_KEY"))
         start = time.time()
         resp = client.messages.create(
-            model="claude-3-5-sonnet-latest",
+            model="claude-3-sonnet-20240229",
             max_tokens=300,
             messages=[{"role": "user", "content": prompt}],
             timeout=timeout
